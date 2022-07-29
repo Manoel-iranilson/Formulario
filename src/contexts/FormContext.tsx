@@ -5,9 +5,10 @@ import { createContext, ReactNode, useContext, useReducer } from "react";
 type State = {
   currentStep: number;
   name: string;
-  level: 0 | 1;
+  level: 0 | 1 | 2;
   email: string;
   github: string;
+  linkedin: string;
 };
 
 type Action = {
@@ -34,6 +35,7 @@ const initialDate = {
   level: 0,
   email: "",
   github: "",
+  linkedin: "",
 };
 
 export enum FormActions {
@@ -42,6 +44,7 @@ export enum FormActions {
   setLevel,
   setEmail,
   setGitHub,
+  setLinkedin,
 }
 
 const FormReducer = (state: State, action: Action) => {
@@ -60,6 +63,9 @@ const FormReducer = (state: State, action: Action) => {
 
     case FormActions.setGitHub:
       return { ...state, github: action.payload };
+
+    case FormActions.setLinkedin:
+      return { ...state, linkedin: action.payload };
     default:
       return state;
   }
