@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { useForm, FormActions } from "../../contexts/FormContext";
 import * as S from "./styles";
@@ -11,7 +11,7 @@ const FormStep01: React.FC = () => {
   useEffect(() => {
     dispatch({
       type: FormActions.setCurrentStep,
-      payload: 1,
+      payload: 0,
     });
   });
 
@@ -32,7 +32,7 @@ const FormStep01: React.FC = () => {
 
   return (
     <S.Container>
-      <p>Passo {state.currentStep}/3</p>
+      <p>Passo 1/3</p>
       <h1>Vamos começar com seu dados</h1>
       <p>Preencha todos os campos para proceguir</p>
 
