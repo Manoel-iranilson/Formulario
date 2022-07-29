@@ -13,7 +13,7 @@ const FormStep01: React.FC = () => {
       type: FormActions.setCurrentStep,
       payload: 0,
     });
-  });
+  }, []);
 
   function NameChange(e: ChangeEvent<HTMLInputElement>) {
     dispatch({
