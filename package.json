@@ -1,4 +1,6 @@
+
 {
+  "homepage": "https://Manoel-iranilson.github.io/Formulario",
   "name": "formulariomulti",
   "private": true,
   "version": "0.0.0",
@@ -6,7 +8,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -21,6 +25,7 @@
     "@types/react-dom": "^18.0.6",
     "@types/styled-components": "^5.1.25",
     "@vitejs/plugin-react": "^2.0.0",
+    "gh-pages": "^4.0.0",
     "typescript": "^4.6.4",
     "vite": "^3.0.0"
   }

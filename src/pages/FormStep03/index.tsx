@@ -51,7 +51,7 @@ const FormStep02: React.FC = () => {
     <S.Container>
       <p>Passo {state.currentStep}/3</p>
       <h1>{state.name}, Onde te achamos?</h1>
-      <p>Preencha com seus contatos{state.linkedin}</p>
+      <p>Preencha com seus contatos</p>
       <hr />
       <label>
         Qual o seu Email?
